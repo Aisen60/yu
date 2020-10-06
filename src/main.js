@@ -22,6 +22,8 @@ export default function(Vue, { router, head, isClient }) {
   Vue.mixin({
     methods: {
       splicingFileUrl(url) {
+        alert(JSON.stringify(process.env));
+        console.log(process.env);
         return process.env.GRIDSOME_FILES + url;
       },
     },
