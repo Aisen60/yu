@@ -1,0 +1,561 @@
+.darkmode-layer,
+.darkmode-toggle {
+  z-index: 500;
+}
+
+.darkmode--activated .photo-background {
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+.darkmode--activated img {
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+.darkmode--activated .photo-background {
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+.darkmode--activated #comment {
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
+  isolation: isolate;
+  mix-blend-mode: difference;
+}
+@media screen and (max-width: 760px) {
+  .darkmode-layer,
+  .darkmode-toggle {
+    display: none;
+  }
+}
+.darkmode--activated .form-control {
+  color: #ffffff;
+}
+
+.darkmode-toggle {
+  border-radius: 0;
+  width: 50px;
+  height: 50px;
+  background: #848484;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.body {
+  margin: 0;
+  font-size: 14px;
+  color: #33333d;
+  font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
+  a {
+    color: #33333d;
+  }
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.back-to-ceiling {
+  position: fixed;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background: #d5dbe7;
+  }
+}
+
+.github-corner {
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+}
+
+.nav-link {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  // min-width: 280px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px;
+    a {
+      font-size: 18px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+    }
+  }
+}
+
+.app-header {
+  // background: url(https://pics.manqian.com/mq-pim/2020012….jpg);
+  height: 400px;
+  // background-image: url("https://gitee.com/aisen60/blog/raw/master/assets/I1UBS4.jpg");
+  background-position: 30% 70%;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.66);
+  background-size: cover;
+  position: relative;
+  z-index: 500;
+  background-repeat: no-repeat;
+
+  .app-header-section {
+  }
+
+  .app-header-nav {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    padding-top: 20px;
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      a {
+        color: #fff;
+      }
+    }
+    ul {
+      margin-left: auto;
+      li {
+        a {
+          color: #fff;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .app-header-bio-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.66), transparent);
+    .bio-wrapper {
+      margin: auto;
+      padding-left: 25px;
+      padding-top: 20px;
+      padding-bottom: 35px;
+      color: #fff;
+      h3 {
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &.app-header-fixed {
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    background-position: 30% 90%;
+  }
+}
+
+.app-footer {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .app-footer-wrapper {
+    max-width: 700px;
+    height: 40px;
+    margin: 0 auto;
+    color: #1b2b4f;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    font-size: 16px;
+    p {
+      padding: 0;
+    }
+  }
+}
+
+.page-index {
+  background: #fff;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .page-index-section {
+    padding: 8px 0;
+
+    .index-avatar {
+      width: 150px;
+      height: 150px;
+      padding: 4px;
+      box-shadow: 1px 1px 1px 1px rgba(209, 210, 214, 0.86);
+      border-radius: 50%;
+    }
+
+    .index-full-name {
+      margin: 0;
+    }
+
+    .index-bio {
+      color: #505050;
+      font-size: 16px;
+    }
+  }
+
+  .page-index-division {
+    height: 1px;
+    border: 0;
+    width: 80%;
+    max-width: 300px;
+    background-image: linear-gradient(-2deg, transparent, #d5d5d5, transparent);
+    margin: 5px 0;
+  }
+
+  .page-index-footer {
+    color: #a2a2a2;
+    font-size: 18px;
+  }
+}
+
+.page-about {
+  background: #fff;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .page-about-section {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+  .page-about-text-right {
+    // text-align: right;
+  }
+}
+
+.page-postsList {
+  .page-postsList-wrapper {
+    padding: 30px 10px;
+    background-color: #f8f9fa;
+    .card-box {
+      display: flex;
+      flex-wrap: wrap;
+      .card-wrapper {
+        .card-image {
+          display: block;
+          height: 230px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .card-body {
+          transition: box-shadow 0.3s;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          background-color: #fff;
+          padding: 20px;
+          margin-bottom: 30px;
+          // height: 120px;
+          &:hover {
+            box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1);
+          }
+
+          .card-title,
+          .card-abstract {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+
+          .card-title {
+            margin: 0;
+            font-size: 18px;
+            -webkit-line-clamp: 1;
+            line-height: 30px;
+            margin-bottom: 5px;
+            .card-link {
+              color: #33333d;
+              &:hover {
+                color: #337ab7;
+              }
+            }
+          }
+          .card-abstract {
+            -webkit-line-clamp: 3;
+            color: #555;
+            height: 60px;
+          }
+          .card-info {
+            padding-top: 10px;
+            .text-muted {
+              padding-right: 5px;
+              .iconfont {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .Pager {
+      text-align: center;
+      .page-number {
+        margin: 0px 3px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        color: rgb(51, 51, 61);
+        font-size: 16px;
+        text-decoration: none;
+        &:hover,
+        &.active {
+          background-color: rgb(51, 51, 61);
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+}
+
+.page-postDetails-wrapper {
+  background: #f8f9fa;
+  overflow: hidden;
+
+  .article {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 40px -1px rgba(2, 10, 18, 0.11);
+
+    img,
+    video {
+      max-width: 100%;
+      max-height: 100%;
+      vertical-align: middle;
+      border-style: none;
+      outline: none;
+      width: 100%;
+    }
+
+    .article-header {
+      position: relative;
+      .head-mask {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+        padding: 30px;
+        .head-title {
+          color: #fff;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        .text-muted {
+          color: #fff;
+        }
+      }
+    }
+
+    .article-main {
+      padding: 10px 20px;
+      background-color: #fff;
+      section {
+        word-break: break-word;
+      }
+    }
+  }
+}
+
+.page-category {
+  max-width: 576px;
+  min-height: calc(100vh - 280px);
+  margin: 0 auto;
+  // padding: 20px;
+
+  .page-category-header {
+    margin: 100px auto;
+    text-align: center;
+  }
+
+  .page-category-list {
+    li {
+      font-size: 16px;
+      list-style: none;
+      margin: 0px 10px 10px 0px;
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: rgb(246, 248, 250);
+      a {
+        padding: 5px 10px;
+        color: #3d3d3d;
+      }
+    }
+  }
+}
+
+.page-archive {
+  max-width: 576px;
+  min-height: calc(100vh - 480px);
+  margin: 0 auto;
+  // padding: 20px;
+
+  .page-archive-container {
+    border-left: 1px dashed rgb(230, 230, 230);
+    .page-archive-container-page {
+      padding-left: 30px;
+      .archive-name,
+      .archive-item {
+        font-size: 16px;
+
+        position: relative;
+        margin-bottom: 30px;
+        &:before {
+          content: "";
+          position: absolute;
+          margin-top: 5px;
+          left: -37px;
+          width: 13px;
+          height: 13px;
+          border-radius: 15px;
+          background-color: #e6e6e6;
+        }
+      }
+      .archive-item {
+        a {
+          color: rgb(51, 51, 61);
+        }
+      }
+    }
+  }
+}
+
+/*在992 和1199 像素之间的屏幕里，中等屏幕，分辨率低的PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .app-header {
+    height: 200px;
+  }
+}
+
+/*在768 和991 像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .app-header {
+    height: 200px;
+  }
+}
+
+/*在480 和767 像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+  .app-header {
+    height: 200px;
+    &.app-header-fixed {
+      height: 50px;
+      .app-header-bio-box {
+        display: none;
+      }
+      .app-header-nav {
+        padding: 10px;
+      }
+    }
+  }
+
+  .page-postsList {
+    .main-banner {
+      height: 300px;
+    }
+  }
+  .page-postDetails-wrapper {
+    .article {
+      margin: 0;
+    }
+  }
+  .app-footer {
+    .app-footer-wrapper {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+/*在小于480 像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+  .app-header {
+    height: 200px;
+    &.app-header-fixed {
+      height: 50px;
+      .app-header-bio-box {
+        display: none;
+      }
+      .app-header-nav {
+        padding: 10px;
+      }
+    }
+  }
+
+  .page-postsList {
+    .main-banner {
+      height: 230px;
+    }
+    .page-postsList-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .page-postDetails-wrapper {
+    .article {
+      margin: 0;
+    }
+  }
+
+  .app-footer {
+    .app-footer-wrapper {
+      display: block;
+      text-align: center;
+    }
+  }
+}

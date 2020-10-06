@@ -1,14 +1,32 @@
 <template>
-  <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
-  </Layout>
+  <div class="page-about">
+    <div class="page-about-section">
+      <p class="page-about-text-right">JUST CALL ME :C</p>
+      <p>THE WECHAT 👉 {{ general.WECHAT }}</p>
+    </div>
+  </div>
 </template>
-
-<script>
-export default {
-  metaInfo: {
-    title: 'About us'
+<page-query>
+query {
+  general:allStrapiGeneral{
+    edges{
+      node{
+        WECHAT
+      }
+    }
   }
 }
+</page-query>
+<script>
+export default {
+  name: "About",
+  metaInfo: {
+    title: "About",
+  },
+  computed: {
+    general() {
+      return this.$page.general.edges[0].node;
+    },
+  },
+};
 </script>
