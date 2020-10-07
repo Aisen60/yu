@@ -37,6 +37,9 @@ query {
 import Nav from "~/components/Nav";
 export default {
   name: "HomePage",
+  metaInfo: {
+    title: "yu",
+  },
   components: {
     Nav,
   },
