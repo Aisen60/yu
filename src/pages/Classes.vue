@@ -20,10 +20,10 @@
 </template>
 <page-query>
 query {
-  classesData: allStrapiClasses {
+  classesData: allStrapiClasses(filter: { is_publish: { in: [true] } }) {
     totalCount
-    edges{
-      node{
+    edges {
+      node {
         id
         title
       }

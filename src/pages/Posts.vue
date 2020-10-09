@@ -25,7 +25,11 @@
 
 <page-query>
 query ($page: Int) {
-  postsData: allStrapiPost (perPage: 10, page: $page) @paginate {
+  postsData: allStrapiPost (
+    perPage: 10
+    page: $page
+    sort: [{ by: "is_top" }]
+    filter: { is_publish: { in: [true] } }) @paginate {
     pageInfo {
       totalPages
       currentPage

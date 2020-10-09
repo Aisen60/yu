@@ -20,7 +20,7 @@
 </template>
 <page-query>
 query {
-  tagsData: allStrapiTag {
+  tagsData: allStrapiTag(filter: { is_publish: { in: [true] }}) {
     totalCount
     edges{
       node{
