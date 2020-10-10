@@ -1,5 +1,8 @@
 <template>
   <div class="card-wrapper">
+    <div class="post-top" v-if="card.is_top">
+      <div>置顶</div>
+    </div>
     <g-link :to="{ path: '/post/' + card.id }" class="card-image">
       <!-- <img :src="splicingFileUrl(card.id + '.jpg')" alt="" /> -->
       <img :src="splicingFileUrl(card.cover && card.cover.url)" />

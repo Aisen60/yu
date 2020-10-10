@@ -26,7 +26,7 @@
 <page-query>
 query ($page: Int) {
   postsData: allStrapiPost (
-    perPage: 10
+    perPage: 12
     page: $page
     sort: [{ by: "is_top" }]
     filter: { is_publish: { in: [true] } }) @paginate {
@@ -52,6 +52,7 @@ query ($page: Int) {
           title
         }
         created_at
+        is_top
       }
     }
   }
