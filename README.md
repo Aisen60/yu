@@ -22,6 +22,6 @@
 - [ ] 暗黑模式的切换
 - [ ] 加入统计
 - [ ] 使用github actions部署到指定域名，当strapi数据发生改变时，使用github api或者github actions触发部署任务。
-- [ ] 图片加载过度动画
+- [X] 图片加载过度动画
 
 线上地址：[http://yu-aisen60.vercel.app/](http://yu-aisen60.vercel.app/)

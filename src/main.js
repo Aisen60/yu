@@ -32,3 +32,11 @@ export default function(Vue, { router, head, isClient }) {
     },
   });
 }
+
+console.log("hello, why are you open the devtools?");
+
+console.log(
+  "If it helps you or if you like it, can you give me a star? thanks"
+);
+
+console.log("repository url: https://github.com/Aisen60/yu");

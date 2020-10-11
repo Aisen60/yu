@@ -6,33 +6,33 @@
           <img
             alt=""
             :src="
-              splicingFileUrl($page.postData.cover && $page.postData.cover.url)
+              splicingFileUrl($page.postList.cover && $page.postList.cover.url)
             "
-            v-if="typeof $page.postData.cover === 'object'"
+            v-if="typeof $page.postList.cover === 'object'"
           />
           <div class="head-mask">
             <h1 class="head-title">
-              {{ $page.postData.title }}
+              {{ $page.postList.title }}
             </h1>
             <div class="card-info">
               <span class="text-muted">
                 <i class="iconfont iconrili"></i>
-                {{ $page.postData.created_at | parseTime("{y}-{m}-{d}") }}
+                {{ $page.postList.created_at | parseTime("{y}-{m}-{d}") }}
               </span>
-              <span class="text-muted" v-if="$page.postData.tags.length > 0">
+              <span class="text-muted" v-if="$page.postList.tags.length > 0">
                 <i class="iconfont icontag"></i>
                 <span
-                  v-for="tag in $page.postData.tags"
+                  v-for="tag in $page.postList.tags"
                   :key="tag.id + tag.title"
                 >
                   {{ tag.title }}
                 </span>
               </span>
 
-              <span class="text-muted" v-if="$page.postData.classes.length > 0">
+              <span class="text-muted" v-if="$page.postList.classes.length > 0">
                 <i class="iconfont iconmore"></i>
                 <span
-                  v-for="classe in $page.postData.classes"
+                  v-for="classe in $page.postList.classes"
                   :key="classe.id + classe.title"
                 >
                   {{ classe.title }}
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="article-main">
-          <section v-html="postContent($page.postData.content)"></section>
+          <section v-html="postContent($page.postList.content)"></section>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@
 </template>
 <page-query>
 query ($id: ID) {
-  postData: strapiPost(id: $id) {
+  postList: strapiPost(id: $id) {
     id
     title
     abstract
@@ -78,8 +78,8 @@ export default {
   name: "Post",
   metaInfo() {
     return {
-      title: this.$page.postData.title,
-      meta: [{ name: "description", content: this.$page.postData.title }],
+      title: this.$page.postList.title,
+      meta: [{ name: "description", content: this.$page.postList.title }],
     };
   },
   computed: {
