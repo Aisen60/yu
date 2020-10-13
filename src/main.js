@@ -8,7 +8,6 @@ import { parseTime } from "./utils";
 import "~/assets/css/index.scss";
 
 export default function(Vue, { router, head, isClient }) {
-  debugger;
   config.APP_META.forEach((meta) => {
     head.meta.push(meta);
   });
@@ -36,14 +35,6 @@ export default function(Vue, { router, head, isClient }) {
       },
     },
   });
-
-  // var _hmt = _hmt || [];
-  // (function() {
-  //   var hm = document.createElement("script");
-  //   hm.src = "https://hm.baidu.com/hm.js?cc75a83c0d990e63e168e05ac8db8fb2";
-  //   var s = document.getElementsByTagName("script")[0];
-  //   s.parentNode.insertBefore(hm, s);
-  // })();
 }
 
 console.log("hello, why are you open the devtools?");
