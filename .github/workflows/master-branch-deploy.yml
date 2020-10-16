@@ -1,11 +1,14 @@
+name: Branch Deploy
 on:
-    repository_dispatch:
-      types: [run_tests]
-  name: Run tests
-  jobs:
-    test:
-      name: Run your tests
-      runs-on: ubuntu-latest
-      steps:
-        - run: |
-            echo "I just ran all your tests!"
+  repository_dispatch:
+    types: rebuild
+
+jobs:
+  master-branch-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Tar gz
+        run: tar -zcvf app.tgz src
