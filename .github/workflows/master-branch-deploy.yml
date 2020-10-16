@@ -1,23 +1,11 @@
-name: Branch Deploy
 on:
-  push:
-    branch:
-      - master
-    paths-ignore: # 下列文件的变更不触发部署
-      - .editorconfig
-      - .eslintrc
-      - .gitignore
-      - .prettierrc
-      - README.md
-      - LICENSE
-
-jobs:
-  master-branch-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Tar gz
-        run: tar -zcvf app.tgz src
-
+    repository_dispatch:
+      types: [run_tests]
+  name: Run tests
+  jobs:
+    test:
+      name: Run your tests
+      runs-on: ubuntu-latest
+      steps:
+        - run: |
+            echo "I just ran all your tests!"
