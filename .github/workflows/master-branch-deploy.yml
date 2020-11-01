@@ -1,14 +1,30 @@
 name: Branch Deploy
 on:
-  repository_dispatch:
-    types: rebuild
+  push:
+    branch:
+      - master
+    paths-ignore: # 下列文件的变更不触发部署
+      - .editorconfig
+      - .eslintrc
+      - .gitignore
+      - .prettierrc
+      - README.md
+      - LICENSE
 
 jobs:
   master-branch-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
-
-      - name: Tar gz
-        run: tar -zcvf app.tgz src
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd /webapp/yu
+            git pull origin master
+            cnpm install
+            npm run build
+            pm2 reload pm2.config.json
