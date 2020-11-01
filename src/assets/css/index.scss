@@ -291,6 +291,7 @@ ol {
       flex-wrap: wrap;
       .card-wrapper {
         width: 100%;
+        min-width: 100%;
         .post-top {
           z-index: 10;
           width: 80px;
@@ -319,6 +320,7 @@ ol {
           display: block;
           height: 230px;
           position: relative;
+          overflow: hidden;
           img {
             width: 0;
             height: 0;
