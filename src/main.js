@@ -17,7 +17,7 @@ export default function(Vue, { router, head, isClient }) {
   });
 
   head.script.push({
-    src: "https://hm.baidu.com/hm.js?cc75a83c0d990e63e168e05ac8db8fb2",
+    src: "https://hm.baidu.com/hm.js?789f5be3cc8017377a1363fc4e5eb349",
   });
 
   // Set default layout as a global component
