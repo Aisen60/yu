@@ -10,6 +10,8 @@ on:
       - .prettierrc
       - README.md
       - LICENSE
+  repository_dispatch:
+    types: rebuild
 
 jobs:
   master-branch-deploy:
