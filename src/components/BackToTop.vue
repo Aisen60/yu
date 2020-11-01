@@ -39,7 +39,7 @@ export default {
       default() {
         return {
           right: '20px',
-          bottom: '20px',
+          bottom: '60px',
           width: '40px',
           height: '40px',
           'border-radius': '4px',
