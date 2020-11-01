@@ -27,4 +27,3 @@ jobs:
             git pull origin master
             cnpm install
             npm run build
-            pm2 reload pm2.config.json
