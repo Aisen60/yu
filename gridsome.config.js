@@ -3,7 +3,6 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminpnal and run `gridsome develop`
-
 module.exports = {
   icon: "./static/favicon.png",
   titleTemplate: "aisen60 | %s",
@@ -11,7 +10,7 @@ module.exports = {
     {
       use: "@gridsome/source-strapi",
       options: {
-        apiURL: "http://caixusheng.com:1337",
+        apiURL: process.env.GRIDSOME_FILES,
         queryLimit: 1000, // Defaults to 100
         contentTypes: ["post", "tag", "classes"],
         typeName: "Strapi",
