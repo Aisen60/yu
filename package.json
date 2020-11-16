@@ -9,6 +9,8 @@
   "dependencies": {
     "@gridsome/source-strapi": "^0.2.0",
     "gridsome": "^0.7.0",
+    "highlight.js": "^10.3.2",
+    "markdown-it": "^12.0.2",
     "marked": "^1.2.0"
   },
   "devDependencies": {
