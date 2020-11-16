@@ -1,6 +1,4 @@
 @import './load.scss';
-@import './typo.css';
-@import './markdown.css';
 
 .none {
   display: none;
@@ -68,16 +66,16 @@
   margin: 0;
 }
 
-.body {
-  margin: 0;
-  font-size: 14px;
-  color: #33333d;
-  font-family: 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei',
-    'WenQuanYi Micro Hei', sans-serif;
-  a {
-    color: #33333d;
-  }
-}
+// .body {
+//   margin: 0;
+//   font-size: 14px;
+//   color: #33333d;
+//   font-family: 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei',
+//     'WenQuanYi Micro Hei', sans-serif;
+//   a {
+//     color: #33333d;
+//   }
+// }
 
 // a,
 // a:hover {
