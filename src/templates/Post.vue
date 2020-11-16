@@ -17,7 +17,7 @@
             <div class="card-info">
               <span class="text-muted">
                 <i class="iconfont iconrili"></i>
-                {{ $page.postList.created_at | parseTime("{y}-{m}-{d}") }}
+                {{ $page.postList.created_at | parseTime('{y}-{m}-{d}') }}
               </span>
               <span class="text-muted" v-if="$page.postList.tags.length > 0">
                 <i class="iconfont icontag"></i>
@@ -42,7 +42,10 @@
           </div>
         </div>
         <div class="article-main">
-          <section v-html="postContent($page.postList.content)"></section>
+          <section
+            v-html="$md.render($page.postList.content)"
+            class="typo"
+          ></section>
         </div>
       </div>
     </div>
@@ -72,22 +75,15 @@ query ($id: ID) {
 </page-query>
 
 <script>
-import marked from "marked";
+import marked from 'marked'
 
 export default {
-  name: "Post",
+  name: 'Post',
   metaInfo() {
     return {
       title: this.$page.postList.title,
-      meta: [{ name: "description", content: this.$page.postList.title }],
-    };
+      meta: [{ name: 'description', content: this.$page.postList.title }],
+    }
   },
-  computed: {
-    postContent: () => {
-      return (body) => {
-        return marked(body);
-      };
-    },
-  },
-};
+}
 </script>

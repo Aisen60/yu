@@ -1,3 +1,7 @@
+@import './load.scss';
+@import './typo.css';
+@import './markdown.css';
+
 .none {
   display: none;
 }
@@ -5,8 +9,6 @@
 .block {
   display: block;
 }
-
-@import "./load.scss";
 
 .darkmode-layer,
 .darkmode-toggle {
@@ -70,23 +72,23 @@
   margin: 0;
   font-size: 14px;
   color: #33333d;
-  font-family: "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei",
-    "WenQuanYi Micro Hei", sans-serif;
+  font-family: 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft YaHei',
+    'WenQuanYi Micro Hei', sans-serif;
   a {
     color: #33333d;
   }
 }
 
-a,
-a:hover {
-  text-decoration: none;
-}
+// a,
+// a:hover {
+//   text-decoration: none;
+// }
 
-ul,
-li,
-ol {
-  list-style-type: none;
-}
+// ul,
+// li,
+// ol {
+//   // list-style-type: none;
+// }
 
 .fade-enter-active,
 .fade-leave-active {
@@ -499,7 +501,7 @@ ol {
         position: relative;
         margin-bottom: 30px;
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           margin-top: 5px;
           left: -37px;
