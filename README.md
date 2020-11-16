@@ -25,6 +25,6 @@
 - [x] 加入统计
 - [x] 使用 github actions 部署到指定域名，当 strapi 数据发生改变时，使用 github api 或者 github actions 触发部署任务。
 - [x] 图片加载过度动画
-- [ ] 修改 Markdown 样式
+- [x] 修改 Markdown 样式
 
 线上地址：[http://caixusheng.com/](http://caixusheng.com/)
