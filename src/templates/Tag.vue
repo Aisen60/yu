@@ -3,7 +3,7 @@
     <section class="page-archive">
       <div class="page-archive-container">
         <div class="page-archive-container-page">
-          <h2 class="archive-name"># {{ $page.tag.title }}</h2>
+          <h2 class="archive-name title-name"># {{ $page.tag.title }}</h2>
           <div
             class="archive-item"
             v-for="post in $page.tag.posts"
